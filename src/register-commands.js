@@ -21,15 +21,15 @@ const commands = [
         choices: [
           {
             name: "1",
-            value: 1,
+            value: "1",
           },
           {
             name: "2",
-            value: 2,
+            value: "2",
           },
           {
             name: "3",
-            value: 3,
+            value: "3",
           },
         ],
         required: true,
@@ -42,6 +42,10 @@ const commands = [
       },
     ],
   },
+  {
+    name: 'embed',
+    description: 'Sends an embed!'
+  }
 ];
 
 const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
