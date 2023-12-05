@@ -15,6 +15,10 @@ const client = new Client({
   ],
 });
 
+const  eventHandler = require('./handlers/eventHandler')
+
+eventHandler(client);
+
 let status = [
   {
     name: 'everyday',
@@ -38,14 +42,16 @@ let status = [
   }
 ]
 
-client.on("ready", async (c) => {
-  console.log(`✅ ${c.user.tag} is online`);
+// client.on("ready", async (c) => {
+//   console.log(`✅ ${c.user.tag} is online`);
 
-  setInterval(() => {
-    let random = Math.floor(Math.random() * status.length)
-    client.user.setActivity(status[random])
-  }, 5000)
-});
+//   setInterval(() => {
+//     let random = Math.floor(Math.random() * status.length)
+//     client.user.setActivity(status[random])
+//   }, 5000)
+// });
+
+
 
 client.on("interactionCreate", (interaction) => {
   if (!interaction.isChatInputCommand()) return;
