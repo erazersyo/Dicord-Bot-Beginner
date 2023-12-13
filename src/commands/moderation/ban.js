@@ -1,31 +1,31 @@
 const {
   ApplicationCommandOptionType,
   PermissionFlagsBits,
-} = require("discord.js");
+} = require('discord.js');
 
 module.exports = {
-  name: "ban",
-  description: "Bans a member from the server.",
+  deleted: true,
+  name: 'ban',
+  description: 'Bans a member!!!',
   // devOnly: Boolean,
   // testOnly: Boolean,
-  // options: Object[],
   options: [
     {
-      name: "target-user",
-      description: "The user to ban.",
+      name: 'target-user',
+      description: 'The user to ban.',
       required: true,
       type: ApplicationCommandOptionType.Mentionable,
     },
     {
-      name: "reason",
-      description: "The reason for banning.",
+      name: 'reason',
+      description: 'The reason for banning.',
       type: ApplicationCommandOptionType.String,
     },
   ],
   permissionsRequired: [PermissionFlagsBits.Administrator],
-  botPermissions: [PermissionFlagsBits.BanMembers],
+  botPermissions: [PermissionFlagsBits.Administrator],
 
   callback: (client, interaction) => {
-    interaction.reply(`Pong! ${client.ws.ping}ms`);
+    interaction.reply('ban..');
   },
 };
