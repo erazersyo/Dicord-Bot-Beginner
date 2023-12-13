@@ -42,16 +42,14 @@ let status = [
   }
 ]
 
-// client.on("ready", async (c) => {
-//   console.log(`✅ ${c.user.tag} is online`);
+client.on("ready", async (c) => {
+  // console.log(`✅ ${c.user.tag} is online`);
 
-//   setInterval(() => {
-//     let random = Math.floor(Math.random() * status.length)
-//     client.user.setActivity(status[random])
-//   }, 5000)
-// });
-
-
+  setInterval(() => {
+    let random = Math.floor(Math.random() * status.length)
+    client.user.setActivity(status[random])
+  }, 5000)
+});
 
 client.on("interactionCreate", (interaction) => {
   if (!interaction.isChatInputCommand()) return;
@@ -59,8 +57,12 @@ client.on("interactionCreate", (interaction) => {
   if (interaction.commandName === "hey") {
     interaction.reply("hey hey hey hey wat");
   }
+  // if (interaction.commandName === "say") {
+  //   const string = interaction.options
+  //   interaction.reply("hey hey hey hey wat");
+  // }
   if (interaction.commandName === "ping") {
-    interaction.reply("pongpiangping");
+    ("pongpiangping");
   }
   if (interaction.commandName === "add") {
     const num1 = interaction.options.get("first-number").value;
@@ -108,17 +110,17 @@ client.on("messageCreate", (message) => {
   if (message.content === "hi") {
     message.channel.send(`hii ${message.author.globalName}`);
   }
-  if (message.author.username === "eraserrr") {
-    const responses = [
-      "hii ni hao",
-      "today is a good day",
-      "i am very tired",
-      "i wanna sleep",
-    ];
-    const randomIndex = Math.floor(Math.random() * responses.length);
-    const randomResponse = responses[randomIndex];
-    message.channel.send(randomResponse);
-  }
+  // if (message.author.username === "eraserrr") {
+  //   const responses = [
+  //     "hii ni hao",
+  //     "today is a good day",
+  //     "i am very tired",
+  //     "i wanna sleep",
+  //   ];
+  //   const randomIndex = Math.floor(Math.random() * responses.length);
+  //   const randomResponse = responses[randomIndex];
+  //   message.channel.send(randomResponse);
+  // }
   if (message.author.username === "luilui") {
     const responses = [
       "hi luiluiluilui",
@@ -130,12 +132,35 @@ client.on("messageCreate", (message) => {
     const randomResponse = responses[randomIndex];
     message.channel.send(randomResponse);
   }
+  // if (message.author.username === "oke6029") {
+  //   const responses = [
+  //     "hi luiluiluilui",
+  //     "why r u playing mihoyo game?",
+  //     "furina c4 fail?",
+  //     "yuan shen qiiiiidongggggggggg",
+  //   ];
+  //   const randomIndex = Math.floor(Math.random() * responses.length);
+  //   const randomResponse = responses[randomIndex];
+  //   message.channel.send(randomResponse);
+  // }
   if (message.author.username === "bear1015") {
     const responses = [
       "hi bear",
       "star rail fun mou?",
       "congraz to have strongest Welt in our server",
       "where is ur clara?",
+      "i know u like my bot?",
+      "noob bear",
+      "hi stupid",
+    ];
+    const randomIndex = Math.floor(Math.random() * responses.length);
+    const randomResponse = responses[randomIndex];
+    message.channel.send(randomResponse);
+  }
+  if (message.author.username === "cedric8382") {
+    const responses = [
+      "hi cedric",
+      "wakao cedric"
     ];
     const randomIndex = Math.floor(Math.random() * responses.length);
     const randomResponse = responses[randomIndex];
