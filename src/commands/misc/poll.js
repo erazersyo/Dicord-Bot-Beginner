@@ -59,21 +59,21 @@ module.exports = {
         "https://cdn.icon-icons.com/icons2/1369/PNG/512/-poll_89868.png"
       )
       .addFields(
-        { name: `1️⃣ ${choice1}`, value: " " },
-        { name: `2️⃣ ${choice2}`, value: " " },
+        { name: `1️⃣  ${choice1}`, value: " " },
+        { name: `2️⃣  ${choice2}`, value: " " },
       )
       .setTimestamp()
       .setFooter({
         text: "React yourself to vote la 😒",
       });
       if (choice3) {
-        embed.addFields({ name: `3️⃣ ${choice3}`, value: " " });
+        embed.addFields({ name: `3️⃣  ${choice3}`, value: " " });
       }
       if (choice4) {
-        embed.addFields({ name: `4️⃣ ${choice4}`, value: " " });
+        embed.addFields({ name: `4️⃣  ${choice4}`, value: " " });
       }
       if (choice5) {
-        embed.addFields({ name: `5️⃣ ${choice5}`, value: " " });
+        embed.addFields({ name: `5️⃣  ${choice5}`, value: " " });
       }
     interaction.reply({ embeds: [embed] });
   },
