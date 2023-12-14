@@ -6,7 +6,7 @@ module.exports = {
   options: [
     {
       name: "question",
-      description: "Question of the poll",
+      description: "tell me wat u wan to say",
       type: ApplicationCommandOptionType.String,
       required: true,
     },

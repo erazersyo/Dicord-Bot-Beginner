@@ -123,10 +123,8 @@ client.on("messageCreate", (message) => {
   // }
   if (message.author.username === "luilui") {
     const responses = [
-      "hi luiluiluilui",
-      "why r u playing mihoyo game?",
-      "furina c4 fail?",
-      "yuan shen qiiiiidongggggggggg",
+      "luilui lapsap",
+      "lapsap luilui"
     ];
     const randomIndex = Math.floor(Math.random() * responses.length);
     const randomResponse = responses[randomIndex];
